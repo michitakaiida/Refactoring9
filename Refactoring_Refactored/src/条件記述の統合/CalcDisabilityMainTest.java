@@ -11,6 +11,7 @@ public class CalcDisabilityMainTest {
 		CalcDisability calcDisability = new CalcDisability();
 		assertEquals(0,calcDisability.disabiilityAmount());
 		assertNotSame(10, calcDisability.disabiilityAmount());
+		
 	}
 
 }
