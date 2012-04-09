@@ -8,4 +8,7 @@ public class SalesMan extends EmployeeType{
 		return EmployeeType.salesMan;
 	}
 
+	int payAmount(Employee emp) {
+		return emp.monthlySalary + emp.commission;
+	}
 }

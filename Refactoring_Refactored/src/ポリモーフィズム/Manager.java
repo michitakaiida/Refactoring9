@@ -1,6 +1,6 @@
 package ポリモーフィズム;
 
-public class Manager extends EmployeeType{
+public class Manager extends EmployeeType {
 
 	@Override
 	int getTypeCode() {
@@ -8,4 +8,7 @@ public class Manager extends EmployeeType{
 		return EmployeeType.manager;
 	}
 
+	int payAmount(Employee emp) {
+		return emp.monthlySalary +emp.bonus;
+	}
 }
