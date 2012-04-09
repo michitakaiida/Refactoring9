@@ -12,6 +12,10 @@ public class Customer {
 		return customerName;
 	}
 
+	public void setCustomerName(String customerName) {
+		this.customerName = customerName;
+	}
+
 	public BillingPlan getplan() {
 		return plan;
 	}
@@ -19,4 +23,10 @@ public class Customer {
 	public int getHistory() {
 		return weeksDelinquent;
 	}
+	
+	public boolean isNull() {
+		return false;
+	}
+	
+	protected Customer() {}
 }
