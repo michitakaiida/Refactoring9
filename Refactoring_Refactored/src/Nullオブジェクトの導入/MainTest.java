@@ -8,9 +8,9 @@ public class MainTest {
 
 	@Test
 	public void test() {
-		Customer customer = new Customer();
 		Site site = new Site();
 		assertNull(site.getCustomer());
+	
 	}
 
 	@Test

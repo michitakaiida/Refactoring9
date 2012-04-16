@@ -29,4 +29,9 @@ public class Customer {
 	}
 	
 	protected Customer() {}
+	
+	static Customer newNull(){
+		return new NullCustomer();
+	}
+	
 }

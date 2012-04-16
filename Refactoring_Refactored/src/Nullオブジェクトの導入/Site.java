@@ -4,7 +4,12 @@ public class Site {
 	Customer customer;
 
 	public Customer getCustomer() {
-		return customer;
+		if(customer==null){
+			return	Customer.newNull();
+		}else{
+			return customer;
+		}
+		
 	}
 
 	public void setCustomer(Customer customer) {

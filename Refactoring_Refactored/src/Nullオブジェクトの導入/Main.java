@@ -17,11 +17,8 @@ public class Main {
 		//site.setCustomer(customer);
 		customer =site.getCustomer();
 		
-		if (customer == null) {
-			customerName = "occupant";
-		} else {
-			customerName = customer.getName();
-		}
+		customerName = customer.getName();
+		
 
 		if (customer.isNull()) {
 			plan = BillingPlan.basic();
