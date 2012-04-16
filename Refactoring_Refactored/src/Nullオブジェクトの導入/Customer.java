@@ -1,11 +1,19 @@
 package Nullオブジェクトの導入;
 
 public class Customer {
-	String customerName ="iida";
-	BillingPlan plan = new BillingPlan(1);
-	PaymentHistory paymentHistory = new PaymentHistory();
+	String customerName;
+	BillingPlan plan;
+	PaymentHistory paymentHistory;
 	int weeksDelinquent;
 
+	public Customer(String customerName, BillingPlan plan,
+			PaymentHistory paymentHistory, int weeksDelinquent) {
+		super();
+		this.customerName = customerName;
+		this.plan = plan;
+		this.paymentHistory = paymentHistory;
+		this.weeksDelinquent = weeksDelinquent;
+	}
 
 
 	public String getName() {
@@ -19,11 +27,20 @@ public class Customer {
 	public BillingPlan getplan() {
 		return plan;
 	}
+	
+	public void setPlan(BillingPlan plan) {
+		this.plan = plan;
+	}
 
 	public int getHistory() {
 		return weeksDelinquent;
 	}
 	
+	public void setHistory(PaymentHistory paymentHistory) {
+		this.paymentHistory = paymentHistory;
+	}
+
+
 	public boolean isNull() {
 		return false;
 	}

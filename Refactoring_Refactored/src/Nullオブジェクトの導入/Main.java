@@ -11,7 +11,7 @@ public class Main {
 		BillingPlan plan;
 		int weeksDelinquent;
 	
-		Customer customer = new Customer();
+		Customer customer = new Customer("iida",new BillingPlan(1),new PaymentHistory(),1);
 		Site site = new Site();
 		//この下をコメントアウトでSiteのcustomerがnullになる。
 		//site.setCustomer(customer);
@@ -19,12 +19,7 @@ public class Main {
 		
 		customerName = customer.getName();
 		
-
-		if (customer.isNull()) {
-			plan = BillingPlan.basic();
-		} else {
-			plan = customer.plan;
-		}
+		plan =  customer.plan;
 
 		if (customer.isNull()) {
 			weeksDelinquent = 0;
@@ -34,6 +29,7 @@ public class Main {
 		}
 
 		System.out.println(customerName);
-		customer.setCustomerName(customerName);
+		System.out.println(plan);
+
 	}
 }
