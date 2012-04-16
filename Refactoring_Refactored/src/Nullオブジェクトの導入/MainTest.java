@@ -12,7 +12,9 @@ public class MainTest {
 		Site site = new Site();
 		site.setCustomer(customer);
 		assertNull(site.getCustomer().customerName);
+		assertNull(site.getCustomer().plan);
 	}
+
 	@Test
 	public void notNullTest() {
 		Customer customer = new Customer("iida",new BillingPlan(1),new PaymentHistory(),1);
@@ -20,6 +22,7 @@ public class MainTest {
 		site.setCustomer(customer);
 		customer =site.getCustomer();
 		assertNotNull(site.getCustomer());
-		assertEquals("iida", customer.customerName);	
+		assertEquals("iida", customer.customerName);
+		assertEquals("çÇÇ¢ÇØÇ«à¿íË", customer.plan.plan);
 	}
 }
